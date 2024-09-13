@@ -1,0 +1,9 @@
+# nixpacks.toml
+
+[frontend]
+start = "cd frontend && npm run dev"
+builder = "nodejs"
+
+[backend]
+start = "cd backend && npm start"
+builder = "nodejs"
