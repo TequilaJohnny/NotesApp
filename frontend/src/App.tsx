@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import LoginForm from "./components/Auth/LoginForm"
 import RegisterForm from "./components/Auth/RegisterForm"
 import Layout from "./components/Layout/Layout"
@@ -15,6 +15,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<Navigate to="/notes" replace />} />
+            
             <Route path="/login" element={<LoginForm />} />
             <Route path="/register" element={<RegisterForm />} />
 
